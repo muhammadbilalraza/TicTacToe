@@ -5,7 +5,6 @@ body {
   --color-error: #cc3333;
   --color-success: #4bb544;
   --border-radius: 4px;
-
   margin: 0;
   height: 100vh;
   display: flex;
@@ -26,17 +25,21 @@ body {
   background: #ffffff;
 }
 
-.container,
-.form__input,
-.form__button {
+.container, .form__input, .form__button {
   font: 500 1rem "Century Gothic", sans-serif;
 }
 
-.form > *:first-child {
+.form--hidden {
+  display: none;
+}
+
+/* form */
+
+.form>*:first-child {
   margin-top: 0;
 }
 
-.form > *:last-child {
+.form>*:last-child {
   margin-bottom: 0;
 }
 
@@ -59,6 +62,7 @@ body {
 }
 
 /* input fields */
+
 .form__input-group {
   margin-bottom: 1rem;
 }
@@ -115,3 +119,17 @@ body {
 }
 
 /* text and links */
+
+.form__text {
+  text-align: center;
+}
+
+.form__link {
+  color: var(--color-secondary);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.form__link:hover {
+  text-decoration: underline;
+}

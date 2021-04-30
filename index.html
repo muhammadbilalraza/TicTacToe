@@ -8,7 +8,8 @@
   </head>
   <body>
     <div class="container">
-      <form class="form" id="login">
+      <!-- Login form -->
+      <form class="form form--hidden" id="login">
         <h1 class="form__title">Login</h1>
 
         <div class="form__message form__message--error">
@@ -48,6 +49,66 @@
         <p class="form__text">
           <a href="./" class="form__link" id="linkCreateAccount"
             >Don't have an account? Create account</a
+          >
+        </p>
+      </form>
+
+      <!-- createAccount form -->
+      <form class="form" id="createAccount">
+        <h1 class="form__title">Create Account</h1>
+
+        <div class="form__message form__message--error">
+          <!-- Incorrect username/password combination. -->
+        </div>
+
+        <div class="form__input-group">
+          <input
+            type="text"
+            class="form__input"
+            autofocus
+            placeholder="Username"
+          />
+          <div class="form__input-error-message">
+            <!-- This is an error message -->
+          </div>
+        </div>
+
+        <div class="form__input-group">
+          <input
+            type="text"
+            class="form__input"
+            autofocus
+            placeholder="Email Address"
+          />
+          <div class="form__input-error-message">
+            <!-- This is an error message -->
+          </div>
+        </div>
+
+        <div class="form__input-group">
+          <input
+            type="password"
+            class="form__input"
+            autofocus
+            placeholder="Password"
+          />
+          <div class="form__input-error-message">
+            <!-- This is an error message -->
+          </div>
+        </div>
+
+        <div class="form__input-group">
+          <input  type="password" class="form__input" autofocus  placeholder="Confirmn password"/>
+          <div class="form__input-error-message">
+            <!-- This is an error message -->
+          </div>
+        </div>
+
+        <button type="submit" class="form__button">Continue</button>
+
+        <p class="form__text">
+          <a href="./" class="form__link" id="linkLogin"
+            >Already have an account? Signin</a
           >
         </p>
       </form>
