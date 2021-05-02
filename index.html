@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <!-- Login form -->
-      <form class="form form--hidden" id="login">
+      <form class="form" id="login">
         <h1 class="form__title">Login</h1>
 
         <div class="form__message form__message--error">
@@ -54,7 +54,7 @@
       </form>
 
       <!-- createAccount form -->
-      <form class="form" id="createAccount">
+      <form class="form form--hidden" id="createAccount">
         <h1 class="form__title">Create Account</h1>
 
         <div class="form__message form__message--error">
@@ -64,6 +64,7 @@
         <div class="form__input-group">
           <input
             type="text"
+            id="signupUsername"
             class="form__input"
             autofocus
             placeholder="Username"
