@@ -45,8 +45,9 @@ function check(){
 
     if(userName.value == storedName && userPw.value == storedPw){
         // alert('You are logged in.');
-        window.location.href="http://www.w3schools.com";
-
+        // window.location.href="play.html";
+         document.location.href="./play.html";
+        return true;
     }else{
         alert('Error on login');
     }
@@ -56,15 +57,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const loginForm = document.querySelector("#login");
     const createAccountForm = document.querySelector("#createAccount");
 
-    document.querySelector("#linkCreateAccount").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.add("form--hidden");
-        createAccountForm.classList.remove("form--hidden");
-    });
+    // document.querySelector("#linkCreateAccount").addEventListener("click", e => {
+    //     e.preventDefault();
+    //     loginForm.classList.add("form--hidden");
+    //     createAccountForm.classList.remove("form--hidden");
+    // });
 
-    document.querySelector("#linkLogin").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.remove("form--hidden");
-        createAccountForm.classList.add("form--hidden");
-    });
+    // document.querySelector("#linkLogin").addEventListener("click", e => {
+    //     e.preventDefault();
+    //     loginForm.classList.remove("form--hidden");
+    //     createAccountForm.classList.add("form--hidden");
+    // });
 });

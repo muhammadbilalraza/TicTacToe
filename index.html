@@ -4,19 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="style.css" />
 
-    <title>Login/Signup</title>
+    <title>Signup</title>
   </head>
   <body>
     <div class="container">
       <!-- createAccount form -->
-      <form name="form-login" class="form form--hidden" id="createAccount">
+      <form name="form-login" id="createAccount">
         <h1 class="form__title">Create Account</h1>
 
         <div class="form__input-group">
           <!-- <label for="name">Email</label> -->
-          <input type="email" id="name" placeholder="Username" required />
+          <input type="email" id="name" placeholder="Email" required />
         </div>
         <div class="form__input-group">
           <!-- <label for="pw">Password</label> -->
@@ -32,32 +32,7 @@
         <input id="rgstr_btn" type="submit" value="Register" onclick="store()" />
 
         <p class="form__text">
-          <a href="./" class="form__link" id="linkLogin">Already have an account? Signin</a>
-        </p>
-      </form>
-
-      <!-- Login form -->
-      <form class="form" id="login">
-        <h1 class="form__title">Login</h1>
-
-        <!-- <div class="form__message form__message--error"> -->
-        <!-- Incorrect username/password combination. -->
-        <!-- </div> -->
-
-        <div class="form__input-group">
-          <!-- <label for="userName">Email</label> -->
-          <input type="email" id="userName" placeholder="Username" required />
-        </div>
-
-        <div class="form__input-group">
-          <!-- <label for="userPw">Password</label> -->
-          <input type="password" id="userPw" placeholder="Password" required />
-        </div>
-
-        <input id="login_btn" type="submit" value="Login" onclick="check()" />
-
-        <p class="form__text">
-          <a href="./" class="form__link" id="linkCreateAccount">Don't have an account? Create account</a>
+          <a href="./login.html" class="form__link" id="linkLogin">Already have an account? Signin</a>
         </p>
       </form>
     </div>
