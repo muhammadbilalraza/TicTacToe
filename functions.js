@@ -41,12 +41,11 @@ function check(){
 
     var userName = document.getElementById('userName');
     var userPw = document.getElementById('userPw');
-    var userRemember = document.getElementById("rememberMe");
+    // var userRemember = document.getElementById("rememberMe");
 
     if(userName.value == storedName && userPw.value == storedPw){
-        alert('You are logged in.');
-        window.open("./target.html","_self")
-        location.reload();
+        // alert('You are logged in.');
+        window.location.href="http://www.w3schools.com";
 
     }else{
         alert('Error on login');
