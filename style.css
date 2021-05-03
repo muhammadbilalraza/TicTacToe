@@ -2,8 +2,7 @@ body {
   --color-primary: #009579;
   --color-primary-dark: #007f67;
   --color-secondary: #252c6a;
-  --color-error: #cc3333;
-  --color-success: #4bb544;
+
   --border-radius: 4px;
   margin: 0;
   height: 100vh;
@@ -13,6 +12,8 @@ body {
   font-size: 18px;
   background: var(--color-primary);
   background-size: cover;
+  font: 500 1rem "Century Gothic", sans-serif;
+
 }
 
 .container {
@@ -24,14 +25,6 @@ body {
   border-radius: var(--border-radius);
   background: #ffffff;
 }
-
-.container, .form__input, .form__button {
-  font: 500 1rem "Century Gothic", sans-serif;
-}
-
-/* .form--hidden {
-  display: none;
-} */
 
 /* form */
 
@@ -61,26 +54,13 @@ body {
   border: 1px solid #dddddd;
   outline: none;
   background: #eeeeee;
-  transition: background 0.2s, border-color 0.2s;
+  transition: 0.2s, border-color 0.2s;
 }
 
 .form__input:focus {
   border-color: var(--color-primary);
   background: #ffffff;
 }
-
-/* .form__input--error {
-  color: var(--color-error);
-  background-color: var(--color-error);
-}
-
-.form__input-error-message {
-  margin-top: 0.5rem;
-  font-size: 0.85rem;
-  color: var(--color-error);
-} */
-
-/* button */
 
 .form__button {
   width: 100%;
@@ -102,8 +82,6 @@ body {
 .form__button:active {
   transform: scale(0.98);
 }
-
-/* text and links */
 
 .form__text {
   text-align: center;

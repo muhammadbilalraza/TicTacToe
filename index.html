@@ -9,27 +9,16 @@
     <title>Signup</title>
   </head>
   <body>
-    <style>
-      body {
-        background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)),
-                  url("../../media/examples/lizard.png");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-size: cover;
-      }
-      </style>
     <div class="container">
       <!-- createAccount form -->
       <form name="form-login" id="createAccount">
         <h1 class="form__title">Create Account</h1>
 
         <div class="form__input-group">
-          <!-- <label for="name">Email</label> -->
-          <input type="email" id="name" placeholder="Email" required />
+          <input class="form__input" type="email" id="name" placeholder="Email" required />
         </div>
         <div class="form__input-group">
-          <!-- <label for="pw">Password</label> -->
-          <input type="password" id="pw" placeholder="Password" required />
+          <input class="form__input" type="password" id="pw" placeholder="Password" required />
         </div>
 
         <ul class="helper-text">
@@ -38,7 +27,7 @@
           <li class="uppercase">Must contain an uppercase letter.</li>
           <li class="special">Must contain a number or special character.</li>
         </ul>
-        <input id="rgstr_btn" type="submit" value="Register" onclick="store()" />
+        <input class="form__button" id="rgstr_btn" type="submit" value="Register" onclick="store()" />
 
         <p class="form__text">
           <a href="./login.html" class="form__link" id="linkLogin">Already have an account? Signin</a>
