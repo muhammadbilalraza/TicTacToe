@@ -1,72 +1,73 @@
 function store(){
 
-    var name = document.getElementById('name');
-    var pw = document.getElementById('pw');
-    var lowerCaseLetters = /[a-z]/g;
-    var upperCaseLetters = /[A-Z]/g;
-    var numbers = /[0-9]/g;
+  var name = document.getElementById('name');
+  var pw = document.getElementById('pw');
+  var lowerCaseLetters = /[a-z]/g;
+  var upperCaseLetters = /[A-Z]/g;
+  var numbers = /[0-9]/g;
 
-    if(name.value.length == 0){
-        alert('Please fill in email');
+  if(name.value.length == 0){
+      alert('Please fill in email');
 
-    }else if(pw.value.length == 0){
-        alert('Please fill in password');
+  }else if(pw.value.length == 0){
+      alert('Please fill in password');
 
-    }else if(name.value.length == 0 && pw.value.length == 0){
-        alert('Please fill in email and password');
+  }else if(name.value.length == 0 && pw.value.length == 0){
+      alert('Please fill in email and password');
 
-    }else if(pw.value.length > 8){
-        alert('Max of 8');
+  }else if(pw.value.length > 8){
+      alert('Max of 8');
 
-    }else if(!pw.value.match(numbers)){
-        alert('please add 1 number');
+  }else if(!pw.value.match(numbers)){
+      alert('please add 1 number');
 
-    }else if(!pw.value.match(upperCaseLetters)){
-        alert('please add 1 uppercase letter');
+  }else if(!pw.value.match(upperCaseLetters)){
+      alert('please add 1 uppercase letter');
 
-    }else if(!pw.value.match(lowerCaseLetters)){
-        alert('please add 1 lovercase letter');
+  }else if(!pw.value.match(lowerCaseLetters)){
+      alert('please add 1 lovercase letter');
 
-    }else{
-        localStorage.setItem('name', name.value);
-        localStorage.setItem('pw', pw.value);
-        alert('Your account has been created');
-    }
+  }else{
+      localStorage.setItem('name', name.value);
+      localStorage.setItem('pw', pw.value);
+      alert('Your account has been created');
+  }
 }
 
 //checking
 function check(){
-    var storedName = localStorage.getItem('name');
-    var storedPw = localStorage.getItem('pw');
+  var storedName = localStorage.getItem('name');
+  var storedPw = localStorage.getItem('pw');
 
-    var userName = document.getElementById('userName');
-    var userPw = document.getElementById('userPw');
-    // var userRemember = document.getElementById("rememberMe");
+  var userName = document.getElementById('userName');
+  var userPw = document.getElementById('userPw');
+  // var userRemember = document.getElementById("rememberMe");
 
-    if(userName.value == storedName && userPw.value == storedPw){
-        // alert('You are logged in.');
-        window.location.href="Tic toc game.html";
-
-    }else{
-        alert('Error on login');
-    }
+  if(userName.value == storedName && userPw.value == storedPw){
+      // alert('You are logged in.');
+      // window.location.href="play.html";
+       document.location.href="./play.html";
+      return true;
+  }else{
+      alert('Error on login');
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-    const loginForm = document.querySelector("#login");
-    const createAccountForm = document.querySelector("#createAccount");
+  const loginForm = document.querySelector("#login");
+  const createAccountForm = document.querySelector("#createAccount");
 
-    document.querySelector("#linkCreateAccount").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.add("form--hidden");
-        createAccountForm.classList.remove("form--hidden");
-    });
+  // document.querySelector("#linkCreateAccount").addEventListener("click", e => {
+  //     e.preventDefault();
+  //     loginForm.classList.add("form--hidden");
+  //     createAccountForm.classList.remove("form--hidden");
+  // });
 
-    document.querySelector("#linkLogin").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.remove("form--hidden");
-        createAccountForm.classList.add("form--hidden");
-    });
+  // document.querySelector("#linkLogin").addEventListener("click", e => {
+  //     e.preventDefault();
+  //     loginForm.classList.remove("form--hidden");
+  //     createAccountForm.classList.add("form--hidden");
+  // });
 });
 
 
