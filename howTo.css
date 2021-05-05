@@ -60,7 +60,35 @@ input[type=text], select, textarea {
     border-radius: 4px;
     cursor: pointer;
   }
+
+  .header { 
+    padding: 0;
+  }
   
+  .header::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  .logo {
+    float: left;
+  }
+  
+  .logo h1 {
+    color: white;
+    font-size: 1.5em;
+    margin: .8em 0 .3em 0;
+    display: inline-block;
+  }
+
+  .logo img {
+    padding-top: 3%;  
+    max-width: 55px;
+    float: left;
+    margin: 0 10px 0 0;
+  }
+
   input[type=submit]:hover {
     background-color: var(--color-primary-dark);
   }
