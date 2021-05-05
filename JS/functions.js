@@ -33,34 +33,33 @@ function store(){
   //   alert('the user already exists');
   // }
    else{
-    const userName = document.getElementById('userName').value;
-    const userPw = document.getElementById('userPw').value;
+
+    //----- This doesn't work-----//
+    // const userName = document.getElementById('userName').value;
+    // const userPw = document.getElementById('userPw').value;
     
-    if (localStorage.getItem('name') == null && localStorage.getItem('pw') == null){
-      localStorage.setItem('name', '[]');
-      localStorage.setItem('pw', '[]');
-    }
+    // if (localStorage.getItem('name') == null && localStorage.getItem('pw') == null){
+    //   localStorage.setItem('name', '[]');
+    //   localStorage.setItem('pw', '[]');
+    // }
 
-    var storedName = JSON.parse(localStorage.getItem('name'));
-    var storedPw = JSON.parse(localStorage.getItem('pw'));
+    // var storedName = JSON.parse(localStorage.getItem('name'));
+    // var storedPw = JSON.parse(localStorage.getItem('pw'));
 
+    // storedName.push(userName);
+    // storedPw.push(userPw);
 
+    // localStorage.setItem('name', JSON.stringify(storedName));
+    // localStorage.setItem('pw', JSON.stringify(storedPw));
 
-    var storedName = JSON.parse(localStorage.getItem('name'));
-    var storedPw = JSON.parse(localStorage.getItem('pw'));
-
-    storedName.push(userName);
-    storedPw.push(userPw);
-
-    localStorage.setItem('name', JSON.stringify(storedName));
-    localStorage.setItem('pw', JSON.stringify(storedPw));
-
-      // localStorage.setItem('name', name.value);
-      // localStorage.setItem('pw', pw.value);
+      localStorage.setItem('name', name.value);
+      localStorage.setItem('pw', pw.value);
       alert('Your account has been created');
   }
 }
 
+
+//function to check if the user already exists
 function userExixts(n) {
 
   const storedName = localStorage.getItem('name');
@@ -86,6 +85,7 @@ function userExixts(n) {
 
 
 //checking
+//password is yet to be mapped against the index of the username.
 function check(){
   var storedName = localStorage.getItem('name');
   var storedPw = localStorage.getItem('pw');
@@ -101,6 +101,7 @@ function check(){
       return true;
   } else{
       alert('Error on login');
+      return false;
   }
 }
 
