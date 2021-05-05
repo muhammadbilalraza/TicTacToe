@@ -25,14 +25,65 @@ function store(){
       alert('please add 1 uppercase letter');
 
   }else if(!pw.value.match(lowerCaseLetters)){
-      alert('please add 1 lovercase letter');
+      alert('please add 1 lowercase letter');
 
-  }else{
-      localStorage.setItem('name', name.value);
-      localStorage.setItem('pw', pw.value);
+  }
+  // else if (userExixts(name.value))
+  // {
+  //   alert('the user already exists');
+  // }
+   else{
+    const userName = document.getElementById('userName').value;
+    const userPw = document.getElementById('userPw').value;
+    
+    if (localStorage.getItem('name') == null && localStorage.getItem('pw') == null){
+      localStorage.setItem('name', '[]');
+      localStorage.setItem('pw', '[]');
+    }
+
+    var storedName = JSON.parse(localStorage.getItem('name'));
+    var storedPw = JSON.parse(localStorage.getItem('pw'));
+
+
+
+    var storedName = JSON.parse(localStorage.getItem('name'));
+    var storedPw = JSON.parse(localStorage.getItem('pw'));
+
+    storedName.push(userName);
+    storedPw.push(userPw);
+
+    localStorage.setItem('name', JSON.stringify(storedName));
+    localStorage.setItem('pw', JSON.stringify(storedPw));
+
+      // localStorage.setItem('name', name.value);
+      // localStorage.setItem('pw', pw.value);
       alert('Your account has been created');
   }
 }
+
+function userExixts(n) {
+
+  const storedName = localStorage.getItem('name');
+  console.log(JSON.parse(storedName));
+
+  let names; //names array
+
+  if (storedName === null) {
+    return false; //local storage is empty
+  }
+  else {
+    names = JSON.parse( storedName ); //read all the names from localstorage to names array
+  }
+
+  for (i in names) {
+    if (n == i)
+      console.log(n);
+      return true; //if name is found in the storage return true
+  }
+
+  return false;
+}
+
 
 //checking
 function check(){
@@ -43,32 +94,15 @@ function check(){
   var userPw = document.getElementById('userPw');
   // var userRemember = document.getElementById("rememberMe");
 
-  if(userName.value == storedName && userPw.value == storedPw){
+  if (userName.value == storedName && userPw.value == storedPw){
       // alert('You are logged in.');
       // window.location.href="play.html";
-       document.location.href="./play.html";
+       document.location.href="../src/play.html";
       return true;
-  }else{
+  } else{
       alert('Error on login');
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const loginForm = document.querySelector("#login");
-  const createAccountForm = document.querySelector("#createAccount");
-
-  // document.querySelector("#linkCreateAccount").addEventListener("click", e => {
-  //     e.preventDefault();
-  //     loginForm.classList.add("form--hidden");
-  //     createAccountForm.classList.remove("form--hidden");
-  // });
-
-  // document.querySelector("#linkLogin").addEventListener("click", e => {
-  //     e.preventDefault();
-  //     loginForm.classList.remove("form--hidden");
-  //     createAccountForm.classList.add("form--hidden");
-  // });
-});
 
 
 /*        here The game begin */
