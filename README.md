@@ -18,6 +18,10 @@ After filling it and giving us some feedback about our game, the submit button w
 
 Group Members:
 1. **Bilal Raza**
+* Made the proposal.
+* Made the signup/signin pages.
+* Made the header and footer.
+* Compiled and managed the project.
 
 
 2. **Muhammad Abubakr Saeed**
