@@ -33,3 +33,6 @@ Group Members:
 
 
 3. **Abdulkarim Sarmini**
+* Made Tic Toc game code
+* added the **javascript** of it
+* created its **CSS** and its **HTML** code
